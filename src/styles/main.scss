@@ -1,10 +1,24 @@
 @use 'variables';
 @use 'hero';
+@use 'intro';
 @use 'about';
+@use 'fight-club';
+
+@font-face {
+    font-family: Teko;
+    src: url(../../assets/fonts/Teko-VariableFont_wght.ttf);
+    font-weight: 400;
+}
 
 @font-face {
     font-family: Inconsolata;
     src: url(../../assets/fonts/Inconsolata-VariableFont_wdth\,wght.ttf);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: Lora;
+    src: url(../../assets/fonts//Lora-VariableFont_wght.ttf);
     font-weight: 400;
 }
 
@@ -15,7 +29,7 @@
 }
 
 * {
-    font-family: Inconsolata;
+    font-family: Lora;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -31,7 +45,7 @@ body {
     background-color: variables.$backgroundColor;
 }
 
-@mixin text($fontSize: 16px) {
+@mixin text($fontSize: 18px) {
     font-size: $fontSize;
     line-height: $fontSize + 10px;
     color: variables.$primaryTextColor;
@@ -59,7 +73,7 @@ body {
 }
 
 .text--big {
-    @include text(18px);
+    @include text(24px);
 }
 
 .title {
@@ -67,7 +81,7 @@ body {
 }
 
 .title--small {
-    @include title(28px);
+    @include title(32px);
 }
 
 .title--big {

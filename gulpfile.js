@@ -28,7 +28,7 @@ function styles() {
 exports.default = gulp.parallel(styles, scripts, images);
 
 exports.watch = function() {
-    gulp.watch('./src/styles/*.scss', {ignoreInitial: true}, gulp.parallel(styles));
-    gulp.watch('./src/scripts/*.js', {ignoreInitial: true}, gulp.parallel(scripts));
-    gulp.watch('./src/images/*', {ignoreInitial: true}, gulp.parallel(images));
+    gulp.watch('./src/styles/*.scss', {ignoreInitial: false}, gulp.parallel(styles));
+    gulp.watch('./src/scripts/*.js', {ignoreInitial: false}, gulp.parallel(scripts));
+    gulp.watch('./src/images/*', {ignoreInitial: false}, gulp.parallel(images));
 }

@@ -1,0 +1,30 @@
+.intro {
+    padding: 5.6vw;
+    text-align: center;
+
+    &__content {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    img {
+        max-width: 600px;
+        width: 100%;
+    }
+
+    .title {
+        padding: 5.6vw;
+        margin-bottom: 24px;
+        font-size: 64px;
+
+        &--big--is-pink {
+            font-size: 76px;
+        }
+    }
+
+    .text--big {
+        margin-bottom: 24px;
+    }
+
+}
