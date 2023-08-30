@@ -1,5 +1,76 @@
+@use 'variables';
+@use 'hero';
+@use 'about';
+
+@font-face {
+    font-family: Inconsolata;
+    src: url(../../assets/fonts/Inconsolata-VariableFont_wdth\,wght.ttf);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: Staatliches;
+    src: url(../../assets/fonts/Staatliches-Regular.ttf);
+    font-weight: 700;
+}
+
 * {
+    font-family: Inconsolata;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    color: variables.$primaryTextColor;
+    list-style: none;
 }
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: variables.$backgroundColor;
+}
+
+@mixin text($fontSize: 16px) {
+    font-size: $fontSize;
+    line-height: $fontSize + 10px;
+    color: variables.$primaryTextColor;
+}
+
+@mixin title($fontSize: 48px) {
+    @include text($fontSize);
+    font-family: Staatliches;
+    font-style: italic;
+
+    &--is-pink {
+        font-family: Staatliches;
+        font-style: italic;
+        color: #fcb0db;
+        text-shadow: 3px 1px 1px #cb2b63;
+    }
+}
+
+.text {
+    @include text;
+}
+
+.text--small {
+    @include text(12px);
+}
+
+.text--big {
+    @include text(18px);
+}
+
+.title {
+    @include title;
+}
+
+.title--small {
+    @include title(28px);
+}
+
+.title--big {
+    @include title(56px);
+}
+
