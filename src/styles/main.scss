@@ -3,18 +3,7 @@
 @use 'intro';
 @use 'about';
 @use 'fight-club';
-
-@font-face {
-    font-family: Teko;
-    src: url(../../assets/fonts/Teko-VariableFont_wght.ttf);
-    font-weight: 400;
-}
-
-@font-face {
-    font-family: Inconsolata;
-    src: url(../../assets/fonts/Inconsolata-VariableFont_wdth\,wght.ttf);
-    font-weight: 400;
-}
+@use 'characters';
 
 @font-face {
     font-family: Lora;
@@ -45,6 +34,10 @@ body {
     background-color: variables.$backgroundColor;
 }
 
+p {
+    margin-bottom: 8px;
+}
+
 @mixin text($fontSize: 18px) {
     font-size: $fontSize;
     line-height: $fontSize + 10px;
@@ -66,6 +59,13 @@ body {
 
 .text {
     @include text;
+
+    &--is-pink {
+        font-family: Staatliches;
+        font-style: italic;
+        color: #fcb0db;
+        text-shadow: 3px 1px 1px #cb2b63;
+    }
 }
 
 .text--small {
@@ -78,6 +78,8 @@ body {
 
 .title {
     @include title;
+    text-align: center;
+    margin-bottom: 24px;
 }
 
 .title--small {

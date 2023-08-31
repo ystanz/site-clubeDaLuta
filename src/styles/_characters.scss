@@ -1,0 +1,40 @@
+.characters {
+    padding: 5.6vw;
+
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 70px;
+        margin-top: 40px;
+        
+        &__text {
+            margin: 12px 24px;
+        }
+
+        &--narrator {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            text-align: center;
+            white-space: nowrap;
+        }
+
+        &--tyler {
+            background: radial-gradient(#DFB1B4,#CC676A,#722436); 
+            padding: 26px;
+            border: 1px solid #cb2b63;
+            border-radius: 9px;
+
+            img {
+                border: 1px solid #fcb0db;
+            }
+        }
+    }
+
+    img {
+        max-width: 400px;
+    }
+
+
+}
