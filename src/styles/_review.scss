@@ -1,0 +1,59 @@
+.review {
+    padding: 5.6vw;
+    
+    &__content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 2rem;
+    }
+
+// O Consumismo e o Capitalismo
+    //Primeiro bloco
+    & :nth-child(2) {
+        picture {
+            p {
+                text-align: center;
+            }
+            img {
+                max-width: 500px;
+            }
+        }
+    }
+    // Segundo bloco
+    & :nth-child(3) {
+        align-items: start;
+        p {
+            text-align: right;
+        }
+        img {
+            max-width: 350px;
+            width: 100%;
+        }
+    }
+// Solidão e Relações Humanas
+    // Primeiro bloco
+    & :nth-child(4) {
+        margin-top: 3rem;
+        align-items: start;
+        img {
+            max-width: 450px;
+            width: 100%;
+        }
+    }
+    // Segundo bloco
+    & :nth-child(5) {
+        align-items: start;
+        p {
+            text-align: right;
+        }
+        picture {
+            img {
+                max-width: 400px;
+            }
+            p {
+                text-align: center;
+            }
+        }
+    }
+}

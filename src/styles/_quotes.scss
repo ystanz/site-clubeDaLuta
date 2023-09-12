@@ -1,0 +1,39 @@
+@use 'variables';
+
+.quotes {
+    padding: 5.6vw;
+    
+    &__content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 16px;
+        margin: 5rem 0 2rem;
+
+        img {
+            max-width: 400px;
+            width: 100%;
+        }
+    }
+
+    & :nth-child(3) {
+        picture {
+            img {
+                max-width: 500px;
+            }
+            p {
+                text-align: center;
+            }
+        }
+    }
+
+    .quotes-text {
+        font-style: italic;
+        text-shadow: #000 1px 1px 7px;
+        max-height: 600px;
+        max-width: 330px;
+        padding: 26px;
+        border-radius: 5px;
+        background-color: variables.$secondaryBackground;
+    }
+}

@@ -3,35 +3,51 @@
     width: 100vw;
     height: 100vh;
     width: 100%;
-    background-color: #000;
     position: relative;
+    z-index: 1;
+    margin-bottom: 0;
+
+    .animation {
+        transform: scale(1.05);
+        opacity: .8;
+        filter: brightness(70%);
+        transition: all 2s ease-in-out;
+    }
 
     &__logo {
         position: absolute;
-        right: 20%;
-        top: 5%;
+        left: 40%;
+        top: 10%;
         z-index: 1;
-
+        opacity: 0;
+        filter: brightness(0);
+        
         img {
-            max-width: 800px;
+            max-width: 900px;
             width: 100%;
-            opacity: 85%;
-
-            &:hover {
-                cursor: pointer;
-                opacity: 100%;
-            }
+        }
+        &:hover {
+            transition: all .3s ease;
+            cursor: pointer;
+            opacity: 1;
+            filter: brightness(100%);
         }
     }
 
-    &__content {
+    &__tyler {
         position: absolute;
         bottom: 0;
         left: 0;
-
+        
         img {
-            max-width: 600px;
+            max-width: 500px;
             width: 100%;
+            opacity: 0;
+            &:hover {
+                transition: all .3s ease;
+                opacity: 1;
+                filter: brightness(100%);
+            }
         }
     }
 }

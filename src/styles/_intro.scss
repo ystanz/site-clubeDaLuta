@@ -1,11 +1,14 @@
 .intro {
     padding: 5.6vw;
     text-align: center;
+    position: sticky;
+    z-index: 1;
+    margin-bottom: 0;
 
     &__content {
         display: flex;
         justify-content: space-around;
-        align-items: center;
+        align-items: start;
     }
 
     img {
@@ -17,9 +20,8 @@
         padding: 5.6vw;
         margin-bottom: 24px;
         font-size: 64px;
-
-        &--big--is-pink {
-            font-size: 76px;
+        &--is-pink {
+            font-size: 72px;
         }
     }
 

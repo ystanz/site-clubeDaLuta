@@ -1,18 +1,33 @@
 .fight-club {
     padding: 5.6vw;
-
+    
     &__content {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        gap: 2rem;
+    }
 
-        &__text {
-            margin: 12px 24px;
+    //Primeira imagem - Tyler
+    & :nth-child(2) {
+        span {
+            margin-right: .5rem;
+            font-size: 1.7rem;
+        }
+        img {
+            width: 500px;
+            height: 450px;
+            object-fit: cover;
+        }
+    }
 
-            span {
-                margin-right: 8px;
-                font-size: 20px;
-            }
+    //Segunda imagem - Narrador
+    & :nth-child(3) {
+        align-items: start;
+        text-align: right;
+        img {
+            max-width: 400px;
+            width: 100%;
         }
     }
 }

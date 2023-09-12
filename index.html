@@ -8,17 +8,17 @@
 </head>
 <body>
     <section class="hero">
-        <h1 class="hero__logo">
+        <h1>
             <a href="#intro">
-                <img src="./dist/images/fight-club.png" alt="Clube da Luta">
+                <img data-logo-transition class="hero__logo" src="./dist/images/fight-club.png" alt="Clube da Luta">
             </a>
         </h1>
-        <div class="hero__content">            
-            <img src="./dist/images/hero_fight_club.jpg" alt="Clube da Luta">
+        <div class="hero__tyler">            
+            <img id="tyler-logo" src="./dist/images/hero_fight_club.jpg" alt="Tyler apontando para o logo Clube da Luta">
         </div>
     </section>
     <section id="intro" class="intro">
-        <h1 class="title">Senhores... bem-vindos ao <span class="title--big--is-pink">Clube da Luta</span></h1>
+        <h1 class="title">Senhores... bem-vindos ao <span class="title--is-pink">Clube da Luta</span></h1>
         <div class="intro__content">
             <div>
                 <img src="./dist/images/first_rule.gif" alt="Primeira regra do Clube da Luta">
@@ -31,55 +31,90 @@
             </ul>
         </div>
     </section>
-    <section class="about">
+    <section class="warning">
+        <nav class="index">
+            <ul>
+                <li><a class="text" href="#about">Sobre o filme</a></li>
+                <li><a class="text" href="#fight-club">O Clube da Luta</a></li>
+                <li class="drop-nav">
+                    <a class="text" href="#characters">Personagens Principais</a>
+                    <button data-drop-button></button>
+                    <ul>
+                        <li class="drop-nav__item"><a href="#narrator">O Narrador</a></li>
+                        <li class="drop-nav__item"><a href="#tyler">Tyler</a></li>
+                        <li class="drop-nav__item"><a href="#marla">Marla</a></li>
+                    </ul>
+                </li>
+                <li class="drop-nav">
+                    <a class="text" href="#review">Análise do filme</a>
+                    <button data-drop-button></button>    
+                    <ul>
+                        <li class="drop-nav__item"><a href="#consumism">Consumismo e o Capitalismo</a></li>
+                        <li class="drop-nav__item"><a href="#loneliness">Solidão e Relações Humanas</a></li>
+                    </ul>
+                </li>
+                <li><a class="text" href="#quotes">Citações</a></li>
+                <li><a class="text" href="#cast">Elenco Principal</a></li>
+            </ul>
+        </nav>
+        <div class="warning__content">
+            <h3 class="text--big">— Clube da Luta, sabemos que estamos quebrando a primeira e a segunda regra, mas não tem como não deixar de falar dessa obra-prima!</h3>
+        </div>
+    </div>
+        <div class="warning__content">
+            <img src="./dist/images/spoiler-alert.gif" alt="">
+        </div>
+    </section>
+    <section class="about" id="about">
         <h1 class="title">Sobre o <span class="title--is-pink">filme</span></h1>
-        <article class="about__content">
-            <article class="about__content__img">
-                <img src="./dist/images/copy_of_copy.gif" alt="O Narrador">
-                <p class="text--small">"Tudo é uma cópia de uma cópia de uma cópia"</p>    
-            </article class="about__content__img">            
+        <article class="about__content">            
+            <img src="./dist/images/narrator_tyler.jpg" alt="Narrador e Tyler">            
             <article class="about__content__text">
-                <p class="text">— Clube da Luta, sabemos que estamos quebrando a primeira e a segunda regra, mas não tem como não deixar de falar dessa obra-prima!</p>
                 <p class="text">Lançado em 1999, é um filme baseado no romance de mesmo nome, estrelado por Edward Norton, Brad Pitt e Helena Bonham Carter.</p>
-                <p class="text"><i>O Narrador</i> (Norton) é o protagonista descontente do filme, cansado de seu trabalho e de sua vida. Ele começa a frequentar grupos de apoio para pessoas com doenças terminais e aprende que baixar a guarda com estranhos é muito terapêutico. Porém, depois que a dissoluta Marla Singer (Bonham Carter) começa a aparecer nas reuniões de seu grupo de apoio a dinâmica do estranho é arruinada, e <i>O Narrador</i> é novamente incapaz de escapar das limitações de suas próprias falhas de caráter.</p>
+                <p class="text"><i>O Narrador</i> <span class="artist-name">(Edward Norton)</span> é o protagonista descontente do filme, cansado de seu trabalho e de sua vida. Ele começa a frequentar grupos de apoio para pessoas com doenças terminais e aprende que baixar a guarda com estranhos é muito terapêutico. Porém, depois que a dissoluta Marla Singer (Bonham Carter) começa a aparecer nas reuniões de seu grupo de apoio a dinâmica do estranho é arruinada, e <i>O Narrador</i> é novamente incapaz de escapar das limitações de suas próprias falhas de caráter.</p>
+
             </article>
         </article>
         <article class="about__content">
             <p class="text">Como um mecanismo de defesa, sua personalidade se divide e Tyler Durden (Pitt) ganha vida. "Juntos" eles descobrem um novo tipo de grupo de apoio quando iniciam um movimento clandestino de luta de rua chamado Fight Club (Clube da Luta).</p>
-            <img src="./dist/images/narrator_tyler.jpg" alt="O Narrador e Tyler">
+            <img src="./dist/images/about-narrator_tyler.gif" alt="Narrador e Tyler se entreolhando">
         </article>
     </section>
-    <section class="fight-club">
+    <section class="fight-club" id="fight-club">
         <h1 class="title">O <span class="title--is-pink">Clube da Luta</span></h1>
         <article class="fight-club__content">
-            <img src="https://placehold.co/500x400" alt="">
+            <img src="./dist/images/the-fight-club.jpg" alt="O Clube da Luta">
             <article class="fight-club__content__text">
                 <p class="text"><span class="text--is-pink">Fight Club</span> é um clube de luta clandestino apenas para homens. Fundado por Tyler Durden e <i>O Narrador</i>, é um fórum onde homens de todas as posições sociais e de todas as profissões diferentes são capazes de se despir de seus rótulos e lutar entre si como iguais.</p>
-                <p class="text"><i>O Narrador</i> substitui seu vício em grupos de apoio pelo Clube da Luta, pois o considera muito mais terapêutico e genuíno.</p>
+                <p class="text">A violência surge como uma forma momentânea de fazer com que aqueles homens se sintam vivos. Como é explicado pelo protagonista, o mais importante nas lutas não era ganhar ou perder, eram as sensações que elas provocavam: dor, adrenalina, poder. Era como se passassem o tempo todo dormindo e apenas acordassem no Clube da Luta, descarregando toda a raiva acumulada e experimentando uma espécie de libertação.</p>
             </article>
         </article>
+        <article class="fight-club__content">
+            <p class="text"><i>O Narrador</i> substitui seu vício em grupos de apoio pelo Clube da Luta, pois o considera muito mais terapêutico e genuíno.</p>
+            <img src="./dist/images/the-fight-club2.gif" alt="O protagonista no Clube da Luta">
+        </article>
     </section>
-    <section class="characters">
+    <section class="characters" id="characters">
         <h1 class="title"><span class="title--is-pink">Personagens</span> Principais</h1>
-        <article class="characters__content">
-            <article class="characters__content--narrator">
-                <div>
+        <article class="characters__content" id="narrator">
+            <div class="characters__content--narrator">
+                <picture>
                     <img src="./dist/images/thenarrator_jack1.gif" alt="Edward Norton, O Narrador">
                     <p class="text--small">"Eu sou o suor frio de Jack"</p>    
-                </div>
-                <div>
+                </picture>
+                <picture>
                     <img src="./dist/images/thenarrator_jack2.gif" alt="Edward Norton, O Narrador">
                     <p class="text--small">"Eu sou a vingança sorridente de Jack"</p>
-                </div>
-                <div>
+                </picture>
+                <picture>
                     <img src="./dist/images/thenarrator_jack3.gif" alt="Edward Norton, O Narrador">
                     <p class="text--small">"Eu sou o sentimento inflamado de rejeição de Jack"</p>
-                </div>
-                <div>
+                </picture>
+                <picture>
                     <img src="./dist/images/thenarrator_jack4.gif" alt="Edward Norton, O Narrador">
                     <p class="text--small">"Eu sou a completa falta de surpresa de Jack"</p>
-                </div>
-            </article>
+                </picture>
+            </div>
             <article class="characters__content__text">
                 <h1 class="title--small">O Narrador</h1>
                 <p class="text">O personagem de Edward Norton não tem nome, mas é comumente chamado de <i>Narrador</i>. Seu não é revelado, mas é frequentemente citado como sendo <i>"Jack"</i>. Isso se deve à leitura pelo <i>Narrador</i> de uma série de artigos do <i>"Reader's Digest"</i>, nos quais órgãos humanos descrevem suas funções ao leitor na primeira pessoa.</p>
@@ -87,10 +122,8 @@
                 <p class="text">Também é possível, se não provável, que seu nome verdadeiro seja na verdade Tyler Durden, embora este seja o pseudônimo que ele associou ao seu alter ego, é possível que ele esteja tão mentalmente danificado que esqueceu que seu próprio nome é na verdade, Tyler.</p>
             </article>
         </article>
-        <article class="characters__content">
-            <article class="characters__content--tyler">
-                <img src="./dist/images/tyler.webp" alt="Tyler Durden">
-            </article>
+        <article class="characters__content" id="tyler">
+            <img  class="characters__content--tyler" src="./dist/images/tyler.webp" alt="Tyler Durden">
             <article class="characters__content__text">
                 <h1 class="title--small">Tyler Durden</h1>
                 <p class="text">Tyler Durden é o completo oposto do Narrador. Enquanto o Narrador é um consumidor racional e escravo do salário da sociedade moderna, Tyler é um minimalista e neo-ludita que é inteligente, capaz, carismático e intuitivo, basicamente tudo o que o Narrador deseja ser.</p>
@@ -98,17 +131,95 @@
                 <p class="text">No entanto, à medida que a trama avança, suas ações ficam fora de controle, com pouco cuidado com as consequências. Ele traz destruição e caos não apenas para a vida do Narrador, mas também para a sociedade e para pessoas inocentes, tornando-o o verdadeiro anti-herói que é.</p>
             </article>
         </article>
-        <article class="characters__content">
+        <article class="characters__content" id="marla">
             <article class="characters__content__text">
                 <h1 class="title--small">Marla Singer</h1>
-                <p class="text">“A filosofia de vida de Marla, ela me disse, é que ela pode morrer a qualquer momento. A tragédia da vida dela é que ela não faz isso.” </p>
-                <p class="text">Marla é o interesse de amor e ódio na vida de Tyler, mas não vamos esquecer que Marla conheceu Tyler em um momento muito estranho de sua vida.</p>
-                <p class="text">"Comprei este vestido em um brechó por um dólar. É um vestido de dama de honra. Alguém o amou intensamente por um dia e depois o jogou fora. Como uma árvore de Natal. Tão especial. Então, BAM!, está na beira da estrada. Como uma vítima de crime sexual. Roupa íntima do avesso. Encadernado com fita isolante."</p>
+                <p class="text">Marla Singer é uma mulher solitária e perturbada que conhece o narrador quando ambos se faziam passar por doentes em grupos de apoio, em busca de algum consolo para o vazio em suas vidas.</p>
+                <p class="text">Depois de uma tentativa falha de suicídio, se envolve com Tyler e forma assim o terceiro vértice de um bizarro triângulo.</p>
+                <p class="text"><i>"Comprei este vestido em um brechó por um dólar. É um vestido de dama de honra. Alguém o amou intensamente por um dia e depois o jogou fora. Como uma árvore de Natal. Tão especial. Então, BAM!, está na beira da estrada. Como uma vítima de crime sexual. Roupa íntima do avesso. Encadernado com fita isolante."</i></p>
             </article>
-            <article class="characters__content--marla">
-                <img src="./dist/images/marla.gif" alt="Marla Singer">
-            </article>
+            <img class="characters__content--marla" src="./dist/images/marla.gif" alt="Marla Singer">
         </article>
     </section>
+    <section class="review" id="review">
+        <h1 class="title"><span class="title--is-pink">Análise</span> do Filme</h1>
+        <article class="review__content" id="consumism">
+            <picture>
+                <img src="./dist/images/tyler_quote_consumism.png" alt="">
+                <p class="text--small">"As coisas que você possui acabarão possuindo você"</p>
+            </picture>
+            <article>
+                <h1 class="title--small">O Consumismo e o Capitalismo</h1>
+                <p class="text">Inicialmente o filme recebeu críticas bem polarizadas, posteriormente acabou batendo recorde de vendas de DVD se tornando um clássico cult. Hoje o filme é considerado uma obra-prima e faz crítica direta à sociedade consumista em que vivemos e os efeitos que ela provoca nos indivíduos. </p>
+                <p class="text">O filme começa nos mostrando várias marcas famosas e o modo como o protagonista e os demais consomem esses produtos com o objetivo de preencher um vazio interior. Sem nome, este homem é uma representação do cidadão comum, que vive para trabalhar e juntar dinheiro para depois gastar em coisas que não precisa, mas que a sociedade o pressiona a ter.</p>
+            </article>
+        </article>
+        <article class="review__content">
+            <article>
+                <p class="text">Por causa desse ciclo vicioso, os indivíduos são transformados em meros consumidores, espectadores, escravos de um sistema que define o valor de cada um segundo o que ele possui, e esgota toda a sua existência. Isso é algo que podemos notar no monólogo que o protagonista faz no aeroporto, quando lembra a si mesmo que "Essa é a sua vida e ela está terminando um minuto de cada vez".</p>
+            </article>
+            <img src="./dist/images/consumism.gif" alt="Narrador assistindo tv">
+        </article>
+        <article class="review__content" id="loneliness">
+            <img src="./dist/images/review-loneliness.jpg" alt="Narrador e seu alter ego Tyler sentados na calçada">
+            <article>
+                <h1 class="title--small">Solidão e relações humanas precárias</h1>
+                <p class="text">Uma característica transversal a todos personagens é a solidão extrema. Condenados por estar dentro do sistema (como O Narrador) ou por estar fora (como Marla), todos levam uma existência isolada. Quando se encontram nos grupos de apoio, Marla e o protagonista procuravam o mesmo: contato humano, honestidade, a possibilidade de chorar no ombro de um desconhecido.</p>
+                <p class="text">O narrador está tão destruído pela sua solidão, a sua saúde mental está tão abalada, que acaba criando uma outra personalidade, um amigo com que partilhar tudo, um parceiro de luta. Marla é tão desamparada que, quando tenta se suicidar e precisa de ajuda, liga para alguém que acabou de conhecer.</p>
+            </article>
+        </article>
+        <article class="review__content">
+            <article>
+                <p class="text">É possível que essa insociabilidade, esse exílio existencial seja aquilo que atrai os homens do Clube da Luta e, ainda mais, os soldados do Projeto Caos, que passam a viver na mesma casa, a comer e dormir juntos, lutando pela mesma causa. É esse sentimento de pertença que parece atraí-los para Tyler, alguém que partilha a mesma revolta e promove o ódio pela sociedade capitalista que os excluiu.</p>
+            </article>
+            <picture>
+                <img src="./dist/images/copy_of_copy.gif" alt="Narrador no trabalho, com o olhar deprimido e distante">
+                <p class="text--small">"Tudo é uma cópia de uma cópia de uma cópia"</p>
+            </picture>    
+        </article>
+    </section>
+    <section class="quotes" id="quotes">
+        <h1 class="title title--is-pink">Citações</span></h1>
+        <p class="text">Clube da Luta é um filme recheado de falas e críticas de alto impacto que nos permite refletir sobre os valores da moderninade.</p>
+        <p class="text">Aqui estão algumas citações mais famosas para você que já assistiu se relembrar um pouco, e para você que ainda não assistiu se convencer de uma vez e desfrutar dessa obra prima!</p>
+        <article class="quotes__content">
+            <img src="./dist/images/narrator_tyler2.jpg" alt="Narrador e Tyler">
+            <p class="text quotes-text">"A publicidade nos faz perseguir carros e roupas, trabalhar em empregos que odiamos para poder comprar coisas que não precisamos. Somos os filhos do meio da história, cara, sem propósito ou lugar, não temos uma Grande Guerra, nenhuma Grande Depressão, nossa grande guerra é uma guerra espiritual, nossa grande depressão são nossas vidas, todos fomos criados pela televisão para acreditar que um dia seremos todos milionários, deuses do cinema e estrelas do rock, mas não seremos e estamos aprendendo lentamente esse fato. E estamos muito puto."</p>
+        </article>
+        <article class="quotes__content">
+            <p class="text quotes-text">"Você não é seu trabalho. Você não é quanto dinheiro você tem no banco. Você não é o carro que dirige. Você não é o conteúdo da sua carteira. Você não é sua maldita calça cáqui. Você é a porcaria do mundo que só canta e dança".</p>
+            <picture>
+                <img src="./dist/images/tyler_quotes.gif" alt="">
+                <p class="text--small">"Só depois de perdermos tudo é que estamos livres para fazer qualquer coisa"</p>
+            </picture>
+        </article>
+    </section>
+    <section class="cast" id="cast">
+        <h1 class="title"><span class="title--is-pink">Elenco</span> Principal</h1>
+        <ul class="cast__list">
+            <li class="cast__list__item">
+                <img src="./dist/images/pitt.jpg" alt="Brad Pitt">
+                <div class="cast__list__item__info">
+                    <p class="text">Brad Pitt</p>
+                    <p class="text">Tyler Durden</p>
+                </div>
+            </li>
+            <li class="cast__list__item">
+                <img src="./dist/images/norton.jpg" alt="Edward Norton">
+                <div class="cast__list__item__info">
+                    <p class="text">Edward Norton</p>
+                    <p class="text">Narrador</p>
+                </div>
+            </li>
+            <li class="cast__list__item">
+                <img src="./dist/images/helena.jpg" alt="Helena Bonham Carter">
+                <div class="cast__list__item__info">
+                    <p class="text">Helena Bonham Carter</p>
+                    <p class="text">Marla Singer</p>
+                </div>
+            </li>
+        </ul>
+    </section>
+    <script src="./dist/scripts/main.js"></script>
 </body>
 </html>

@@ -1,9 +1,13 @@
 @use 'variables';
 @use 'hero';
 @use 'intro';
+@use 'warning';
 @use 'about';
 @use 'fight-club';
 @use 'characters';
+@use 'review';
+@use 'quotes';
+@use 'cast';
 
 @font-face {
     font-family: Lora;
@@ -15,6 +19,12 @@
     font-family: Staatliches;
     src: url(../../assets/fonts/Staatliches-Regular.ttf);
     font-weight: 700;
+}
+
+@font-face {
+    font-family: 'Core Sans';
+    src: url(../../assets/fonts/Core\ Sans\ NR\ W01\ SC\ 45\ Regular.ttf);
+    font-weight: 400;
 }
 
 * {
@@ -31,11 +41,19 @@ html {
 }
 
 body {
-    background-color: variables.$backgroundColor;
+    background-color: variables.$primaryBackground;
 }
 
-p {
-    margin-bottom: 8px;
+section {
+    background-color: variables.$primaryBackground;
+    margin-bottom: 4.5rem;
+}
+
+article {
+    margin: .5rem 0;
+    p.text {
+        margin-bottom: .5rem;
+    }
 }
 
 @mixin text($fontSize: 18px) {
@@ -52,8 +70,8 @@ p {
     &--is-pink {
         font-family: Staatliches;
         font-style: italic;
-        color: #fcb0db;
-        text-shadow: 3px 1px 1px #cb2b63;
+        color: variables.$secondaryTextColor;
+        text-shadow: 3px 1px 1px variables.$secondaryTextColorShadow;
     }
 }
 
@@ -63,8 +81,8 @@ p {
     &--is-pink {
         font-family: Staatliches;
         font-style: italic;
-        color: #fcb0db;
-        text-shadow: 3px 1px 1px #cb2b63;
+        color: variables.$secondaryTextColor;
+        text-shadow: 3px 1px 1px variables.$secondaryTextColorShadow;
     }
 }
 
@@ -79,14 +97,10 @@ p {
 .title {
     @include title;
     text-align: center;
-    margin-bottom: 24px;
+    margin-bottom: 3rem;
 }
 
 .title--small {
     @include title(32px);
-}
-
-.title--big {
-    @include title(56px);
 }
 

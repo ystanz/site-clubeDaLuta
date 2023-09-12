@@ -1,30 +1,31 @@
 .about {
     padding: 5.6vw;
-
-    img:nth-child(2) {
-            max-width: 350px;
-            width: 100%;
-            margin: 12px 80px;
-    }
-
     &__content {
         display: flex;
         justify-content: center;
         align-items: center;
-        margin-bottom: 24px;
-
-        &__img {
-            text-align: center;
-            max-width: 500px;
-            width: 100%;
-        }
-
-        &__text {
-            margin: 12px 24px;
-                p:first-child {
-                    text-align: center;
-                    font-style: italic;
-            }
+        gap: 2rem;
+    
+        img {
+            max-width: 400px;
         }
     }
+
+    // Imagem da primeira linha
+    article:nth-child(2) {
+        img {
+            max-width: 450px;
+        }
+    }
+    // Conteúdo da segunda linha
+    article:nth-child(3) {
+        align-items: start;
+        text-align: right;
+    }
+
+    .artist-name {
+        font-size: 1rem;
+        font-weight: 200;
+    }
 }
+

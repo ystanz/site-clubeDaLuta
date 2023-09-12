@@ -1,40 +1,40 @@
+@use 'variables';
+
 .characters {
     padding: 5.6vw;
+
+    article:nth-child(1) {
+        text-align: right;
+    }
 
     &__content {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin-bottom: 70px;
-        margin-top: 40px;
-        
-        &__text {
-            margin: 12px 24px;
-        }
+        gap: 2rem;
+        margin: 4rem 0;
 
         &--narrator {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 16px;
+            gap: .7rem;
             text-align: center;
             white-space: nowrap;
+            img {
+                max-width: 245px;
+                width: 100%;
+            }
         }
 
         &--tyler {
-            background: radial-gradient(#DFB1B4,#CC676A,#722436); 
-            padding: 26px;
-            border: 1px solid #cb2b63;
-            border-radius: 9px;
+            max-width: 400px;
+            width: 100%;
+        }
 
-            img {
-                border: 1px solid #fcb0db;
-            }
+        &--marla {
+            max-width: 500px;
+            width: 100%;
         }
     }
-
-    img {
-        max-width: 400px;
-    }
-
-
+    
 }
