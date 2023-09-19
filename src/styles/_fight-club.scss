@@ -1,6 +1,6 @@
 .fight-club {
     padding: 5.6vw;
-    
+
     &__content {
         display: flex;
         justify-content: space-between;
@@ -8,8 +8,8 @@
         gap: 2rem;
     }
 
-    //Primeira imagem - Tyler
-    & :nth-child(2) {
+    //Conteúdo do primeiro bloco
+    article:nth-child(2) {
         span {
             margin-right: .5rem;
             font-size: 1.7rem;
@@ -20,14 +20,42 @@
             object-fit: cover;
         }
     }
-
-    //Segunda imagem - Narrador
-    & :nth-child(3) {
+    //Conteúdo segundo bloco
+    article:nth-child(3) {
         align-items: start;
         text-align: right;
         img {
             max-width: 400px;
             width: 100%;
+        }
+    }
+
+    @media (max-width: 768px) {
+        &__content {
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        article:nth-child(2) {
+            img {
+                width: 85vw;
+                height: 300px;
+                object-fit: cover;
+            }
+            span {
+                margin-right: .4rem;
+                font-size: 1.5rem;
+            }
+        }
+
+        article:nth-child(3) {
+            align-items: center;
+            text-align: left;
+            img {
+                max-width: 75vw;
+                width: 100%;
+            }
         }
     }
 }

@@ -5,27 +5,47 @@
         justify-content: center;
         align-items: center;
         gap: 2rem;
-    
-        img {
-            max-width: 400px;
-        }
     }
 
-    // Imagem da primeira linha
+    // Conteúdo do primeiro bloco
     article:nth-child(2) {
         img {
             max-width: 450px;
+            width: 100%;
         }
     }
-    // Conteúdo da segunda linha
+    // Conteúdo do segundo bloco
     article:nth-child(3) {
         align-items: start;
         text-align: right;
+        img {
+            max-width: 400px;
+            width: 100%;
+        }
     }
 
-    .artist-name {
-        font-size: 1rem;
-        font-weight: 200;
+    @media (max-width: 768px) {
+        &__content {
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        article:nth-child(2) {
+            img {
+                max-width: 75vw;
+                width: 100%;
+            }
+        }
+
+        article:nth-child(3) {
+            text-align: start;
+            align-items: center;
+            img {
+                max-width: 75vw;
+                width: 100%;
+            }
+        }
     }
 }
 

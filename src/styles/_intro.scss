@@ -1,6 +1,5 @@
 .intro {
     padding: 5.6vw;
-    text-align: center;
     position: sticky;
     z-index: 1;
     margin-bottom: 0;
@@ -8,25 +7,173 @@
     &__content {
         display: flex;
         justify-content: space-around;
-        align-items: start;
-    }
+        align-items: center;
+        text-align: center;
 
-    img {
-        max-width: 600px;
-        width: 100%;
-    }
-
-    .title {
-        padding: 5.6vw;
-        margin-bottom: 24px;
-        font-size: 64px;
-        &--is-pink {
-            font-size: 72px;
+        img {
+            max-width: 400px;
+            width: 100%;
+        }
+        
+        .text--big {
+            margin-bottom: 24px;
         }
     }
 
-    .text--big {
-        margin-bottom: 24px;
+    div:nth-child(3) {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 10vw;
+        margin: 10vw auto;
+
+        h3 {
+            max-width: 700px;
+            text-align: right;
+            margin-left: 100px;
+        }
+
+        img {
+            max-width: 300px;
+            width: 100%;
+        }
     }
 
+    @media (max-width:768px) {
+        .title {
+            margin-bottom: 1rem;
+            font-size: 2rem;
+            &--is-pink {
+                font-size: 3rem;
+            }
+        }
+
+        &__content {
+            display: block;
+            img {
+                max-width: 75vw;
+                margin: 1rem auto;
+            }
+            .title--small {
+                font-size: 1.6rem;
+                letter-spacing: 1px;
+                &--is-pink {
+                    font-size: 1.8rem;
+                }
+            }
+            span {
+                margin: 0 .2rem;
+            }
+            .text--big {
+                font-size: 1.2rem;
+            }
+        }
+
+        div:nth-child(3) {
+            padding: 0;
+            margin-bottom: 10rem;
+            h3 {
+                text-align: center;
+                font-size: 1.3rem;
+                margin: 10rem auto 1rem auto;
+            }
+
+            img {
+                max-width: 70vw;
+                width: 100%;
+                margin: 1rem auto;
+            }
+        }
+    }
+}
+
+.nav-button {
+    border: none;
+    background-color: transparent;
+    position: fixed;
+    top: 30px;
+    left: 30px;
+    z-index: 99;
+    opacity: 0;
+    cursor: pointer;
+    transition: opacity .5s ease-in-out;
+    img {
+        width: 5rem;
+    }
+
+    &--is-visible {
+        opacity: .6;
+        transition: transform .5s, opacity .5s ease-in-out;
+        &:hover {
+            opacity: 1;
+            transform: scale(1.1);
+        }
+    }
+}
+.nav-menu {
+    ul:first-child {
+        margin-top: 100px;
+    }  
+    position: fixed;
+    top: 0;
+    left: -100%;
+    padding: 1rem;
+    width: 20rem;
+    height: 100vh;
+    border-radius: 7px;
+    z-index: 98;
+    background-color: rgba(0,0,0,.9);
+    opacity: .9;
+    transition: left .8s ease-in-out;
+
+    .nav-menu__sublist {
+        button {
+            background-image: url(../../dist/images/sabonete.png);
+            width: 40px;
+            height: 40px;
+            border: none;
+            background-color: transparent;
+            background-size: contain;
+            background-repeat: no-repeat;
+            display: inline-block;
+            vertical-align: middle;
+            margin-left: .5rem;
+            filter: brightness(.8);
+            cursor: pointer;
+            &:hover {
+                filter: brightness(1);
+            }
+        }
+        ul {
+            height: 0;
+            overflow: hidden;
+        }
+        &--is-open {
+            button {
+                transform: rotate(20deg);
+            }
+            ul {
+                height: auto;
+            }
+        }
+        &__item {
+            font-size: 1rem;
+            margin-left: 1rem;
+            line-height: 1.3;
+        }
+    }
+
+    img { //Barney vs t-rex
+        max-width: 200px;
+        width: 100%;
+        position: absolute;
+        bottom: 50px;
+        left: 50%;
+        transform: translate(-50%);
+        filter: brightness(.6);
+        transition: filter .7s;
+        &:hover {
+            filter: brightness(1);
+        }
+    }
 }

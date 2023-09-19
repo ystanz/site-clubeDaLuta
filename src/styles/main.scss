@@ -1,12 +1,10 @@
 @use 'variables';
 @use 'hero';
 @use 'intro';
-@use 'warning';
 @use 'about';
 @use 'fight-club';
 @use 'characters';
 @use 'review';
-@use 'quotes';
 @use 'cast';
 
 @font-face {
@@ -51,9 +49,6 @@ section {
 
 article {
     margin: .5rem 0;
-    p.text {
-        margin-bottom: .5rem;
-    }
 }
 
 @mixin text($fontSize: 18px) {
@@ -84,6 +79,12 @@ article {
         color: variables.$secondaryTextColor;
         text-shadow: 3px 1px 1px variables.$secondaryTextColorShadow;
     }
+
+    @media (max-width: 768px) {
+        font-size: 16px;
+        line-height: 24px;
+        margin-bottom: .5rem;
+    }
 }
 
 .text--small {
@@ -94,13 +95,31 @@ article {
     @include text(24px);
 }
 
+.text--link {
+    @include text;
+    font-family: 'Core sans';
+    text-transform: capitalize;
+    letter-spacing: .5px;
+    word-spacing: -1px;
+    cursor: pointer;
+    text-decoration: none;
+    line-height: 2rem;
+    &:hover {
+        border-bottom: 1px solid #fff;
+    }
+}
+
 .title {
     @include title;
     text-align: center;
     margin-bottom: 3rem;
+
+    @media (max-width: 768px) {
+        font-size: 36px;
+        margin-bottom: 1rem;
+    }
 }
 
 .title--small {
     @include title(32px);
 }
-

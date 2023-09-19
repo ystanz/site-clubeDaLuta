@@ -3,51 +3,71 @@
     width: 100vw;
     height: 100vh;
     width: 100%;
-    position: relative;
-    z-index: 1;
+    z-index: 98;
     margin-bottom: 0;
-
-    .animation {
-        transform: scale(1.05);
-        opacity: .8;
-        filter: brightness(70%);
-        transition: all 2s ease-in-out;
-    }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 
     &__logo {
-        position: absolute;
-        left: 40%;
-        top: 10%;
-        z-index: 1;
-        opacity: 0;
-        filter: brightness(0);
-        
         img {
-            max-width: 900px;
+            max-width: 300px;
             width: 100%;
-        }
-        &:hover {
-            transition: all .3s ease;
-            cursor: pointer;
-            opacity: 1;
-            filter: brightness(100%);
+            opacity: 0;
+            &:hover {
+                opacity: 1;
+                filter: brightness(1);
+                transition: opacity .3s, filter .3s;
+            }
         }
     }
 
     &__tyler {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        
+        width: calc(100% - 5.6vw);
+        display: flex;
+        align-items: start;
         img {
-            max-width: 500px;
+            max-width: 400px;
             width: 100%;
             opacity: 0;
             &:hover {
-                transition: all .3s ease;
                 opacity: 1;
-                filter: brightness(100%);
+                filter: brightness(1);
+                transition: opacity .3s, filter .3s;
             }
         }
+    }
+
+    @media (max-width: 768px) {
+        position: relative;
+        &__logo {
+            position: absolute;
+            top: 30vh;
+            left: 55vw;
+            transform: translate(-50%, -50%);
+            img {
+                width: 200px;
+            }
+        }
+
+        &__tyler {
+            width: auto;
+            position: absolute;
+            top: 50vh;
+            left: 5vw;
+            img {
+                width: 100px;
+                height: 150px;
+                object-fit: cover;
+            }
+        }
+    }
+
+    .animation {
+        transform: scale(1.05);
+        opacity: .8;
+        filter: brightness(.8);
+        transition: transform 2s, filter 2s, opacity 2s ease-in-out;
     }
 }
